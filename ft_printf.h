@@ -6,7 +6,7 @@
 /*   By: dcologgi <dcologgi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 09:16:28 by dcologgi          #+#    #+#             */
-/*   Updated: 2023/02/08 14:43:44 by dcologgi         ###   ########.fr       */
+/*   Updated: 2023/02/09 12:34:58 by dcologgi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 int		ft_putchar(int c);
 int		ft_putstr(char *s);
 int		lenght(int nb, int base);
-int		ll_lenght(long long int, int base);
+int		ll_lenght(long long nb, int base);
 
 void	ft_printhex(unsigned int nb, const char formato);
 int		ft_hexlen(unsigned int nb);

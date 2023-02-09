@@ -6,7 +6,7 @@
 /*   By: dcologgi <dcologgi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 17:08:24 by dcologgi          #+#    #+#             */
-/*   Updated: 2023/02/08 14:51:59 by dcologgi         ###   ########.fr       */
+/*   Updated: 2023/02/09 12:28:57 by dcologgi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,24 @@
 
 int	ft_printer(va_list lista_parametri, const char tipo)
 {
-	int	char_stampato;
+	int	char_stamp;
 
-	char_stampato = 0;
+	char_stamp = 0;
 	if (tipo == 'c')
-		char_stampato += ft_putchar(va_arg(lista_parametri, int));
+		char_stamp += ft_putchar(va_arg(lista_parametri, int));
 	else if (tipo == 's')
-		char_stampato += ft_putstr(va_arg(lista_parametri, char *));
+		char_stamp += ft_putstr(va_arg(lista_parametri, char *));
 	else if (tipo == 'p')
-		char_stampato += ft_putptr(va_arg(lista_parametri, uintptr_t));
+		char_stamp += ft_putptr(va_arg(lista_parametri, uintptr_t));
 	else if (tipo == 'd' || tipo == 'i')
-		char_stampato += ft_putnbr(va_arg(lista_parametri, int));
+		char_stamp += ft_putnbr(va_arg(lista_parametri, int));
 	else if (tipo == 'u')
-		char_stampato += ft_putunbr(va_arg(lista_parametri, unsigned int));
+		char_stamp += ft_putunbr(va_arg(lista_parametri, unsigned int));
 	else if (tipo == 'x' || tipo == 'X')
-		char_stampato += ft_puthexnbr(va_arg(lista_parametri, unsigned int), tipo);
+		char_stamp += ft_puthexnbr(va_arg(lista_parametri, unsigned int), tipo);
 	else if (tipo == '%')
-		char_stampato += ft_putchar('%');
-	return (char_stampato);
+		char_stamp += ft_putchar('%');
+	return (char_stamp);
 }
 
 int	ft_printf(const char *a, ...)
@@ -54,8 +54,10 @@ int	ft_printf(const char *a, ...)
 		if (!a[i])
 			return (char_check);
 		if (a[i] != '%')
+		{
 			char_check += ft_putchar(a[i]);
-		i++;
+			i++;
+		}
 	}
 	va_end(lista_parametri);
 	return (char_check);

@@ -6,7 +6,7 @@
 /*   By: dcologgi <dcologgi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 09:54:29 by dcologgi          #+#    #+#             */
-/*   Updated: 2023/02/09 11:23:23 by dcologgi         ###   ########.fr       */
+/*   Updated: 2023/02/09 12:30:38 by dcologgi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_putstr(char *s)
 
 int	lenght(int nb, int base)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (nb <= 0)
@@ -48,7 +48,7 @@ int	lenght(int nb, int base)
 	return (i);
 }
 
-int ll_lenght(long long nb, int base)
+int	ll_lenght(long long nb, int base)
 {
 	int	i;
 
