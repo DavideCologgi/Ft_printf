@@ -6,7 +6,7 @@
 /*   By: dcologgi <dcologgi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 09:54:29 by dcologgi          #+#    #+#             */
-/*   Updated: 2023/02/08 14:46:48 by dcologgi         ###   ########.fr       */
+/*   Updated: 2023/02/09 11:23:23 by dcologgi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int	ft_putstr(char *s)
 	i = 0;
 	if (!s)
 	{
-		ft_putstr("(non valido)");
-		return (12);
+		ft_putstr("(null)");
+		return (6);
 	}
 	while (s[i])
 	{
